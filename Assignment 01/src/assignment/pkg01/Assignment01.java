@@ -1,21 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package assignment.pkg01;
 
-/**
- *
- * @author Eatingplatano
- */
 public class Assignment01 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
-}
+
+        for (int i = 0; i <= 100; i++) {
+            
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
+        }
+
+    }}
+
+                //Im using a for loop that cycles through 0 and 100
+                //combine with an if statment that checks if the number is even
+                //the way it works if the remainder == 0 then the if statment condtion is meet
+                //therefore the nunber is even
+                //then the program will proceed and print the number on a new line
+                //if the condtion is not meet in the if statement then the number 
+                //will not be printed to the console and will continue until 
+                //the variable i the counters equals 100 
