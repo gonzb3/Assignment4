@@ -18,6 +18,7 @@ public class Assignment03 extends Application{
 
         Group gp1 = new Group();
         
+        
         Scene sn = new Scene(gp1, 1080, 980);
         
         stage.setTitle("A House");
