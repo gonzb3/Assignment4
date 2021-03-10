@@ -36,6 +36,10 @@ public class Assignment03 extends Application{
         Rectangle rctDoor2 = new Rectangle (80, 250, Color.WHITE);
         Rectangle rctDoor3 = new Rectangle (80, 250, Color.WHITE);
         Rectangle rctSqr = new Rectangle (100,60, Color.LIGHTGRAY);
+        Rectangle rctSmOne = new Rectangle (100,20,Color.WHITE);
+        Rectangle rctSmTwo = new Rectangle (100,20,Color.WHITE);
+        Rectangle rctSmThree = new Rectangle (100,20,Color.WHITE);
+        Rectangle rctSmFour = new Rectangle (100,20,Color.WHITE);
         
         Circle cirOne = new Circle(); 
         Circle cirTwo = new Circle(); 
@@ -102,6 +106,14 @@ public class Assignment03 extends Application{
         cirEight.setCenterX(915);
         cirEight.setCenterY(341);
         cirEight.setRadius(25);
+        rctSmOne.setX(150);
+        rctSmOne.setY(715);
+        rctSmTwo.setX(370);
+        rctSmTwo.setY(715);
+        rctSmThree.setX(610);
+        rctSmThree.setY(715);
+        rctSmFour.setX(830);
+        rctSmFour.setY(715);
         
 
         
@@ -135,10 +147,13 @@ public class Assignment03 extends Application{
         cirSeven.setStroke(Color.BLACK);
         cirEight.setFill(Color.WHITE);
         cirEight.setStroke(Color.BLACK);
-        
+        rctSmOne.setStroke(Color.BLACK);
+        rctSmTwo.setStroke(Color.BLACK);
+        rctSmThree.setStroke(Color.BLACK);
+        rctSmFour.setStroke(Color.BLACK);
         
         //groups
-        Group gp1 = new Group(rctBlue,rctGreen,rctRed,rctWhite, plyRoof,rctBlackDivider,rctPilOne,rctPilTwo,rctPilThree,rctPilFour,rctDoor1,rctDoor2,rctDoor3,rctSqr,cirOne,cirTwo,cirThree,cirFour,cirFive,cirSix,cirSeven,cirEight);
+        Group gp1 = new Group(rctBlue,rctGreen,rctRed,rctWhite, plyRoof,rctBlackDivider,rctPilOne,rctPilTwo,rctPilThree,rctPilFour,rctDoor1,rctDoor2,rctDoor3,rctSqr,cirOne,cirTwo,cirThree,cirFour,cirFive,cirSix,cirSeven,cirEight,rctSmOne,rctSmTwo,rctSmThree,rctSmFour);
         
         //stairs for loop
        for (int i = 0; i < size; i++){
