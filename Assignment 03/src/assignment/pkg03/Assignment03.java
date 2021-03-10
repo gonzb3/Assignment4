@@ -19,7 +19,8 @@ public class Assignment03 extends Application{
 
     @Override
     public void start(Stage stage) throws Exception {
-
+        //Steps 
+        int size = 10, stepsWidth = 648, stepsX = 216, stepsY = 735;
         
         //Setting variable 
         Rectangle rctBlue = new Rectangle(1080, 980/2, Color.LIGHTBLUE);
@@ -33,7 +34,8 @@ public class Assignment03 extends Application{
                 1080/18, 980/4,
                 1020, 980/4);
  
-        
+        //creating stairs
+        Rectangle[] arrRct = new Rectangle[size];
         
         //Setting positions 
         rctGreen.setY(980/2);
@@ -53,6 +55,19 @@ public class Assignment03 extends Application{
         
         //groups
         Group gp1 = new Group(rctBlue,rctGreen,rctRed,rctWhite, plyRoof,rctBlackDivider);
+        
+        //stairs for loop
+       for (int i = 0; i < size; i++){
+           arrRct[i] = new Rectangle(stepsWidth+=i*6,20,Color.LIGHTGRAY);
+           arrRct[i].setStroke(Color.BLACK);
+           
+           if (i == 0){
+           arrRct[i].setY(stepsY);}
+           else {arrRct[i].setY(stepsY+= 15);}
+           
+           arrRct[i].setX(stepsX -= i * 3);           
+           gp1.getChildren().add(arrRct[i]);
+       }
         
         //scenes 
         Scene sn = new Scene(gp1, 1080, 980);
