@@ -19,7 +19,7 @@ public class Assignment03 extends Application{
 
     @Override
     public void start(Stage stage) throws Exception {
-        //Steps 
+        //Constant sizes to help with the steps for loop below 
         int size = 10, stepsWidth = 648, stepsX = 216, stepsY = 735;
         
         //Setting variable 
@@ -41,6 +41,7 @@ public class Assignment03 extends Application{
         Rectangle rctSmThree = new Rectangle (100,20,Color.WHITE);
         Rectangle rctSmFour = new Rectangle (100,20,Color.WHITE);
         
+        //creating the 8 circles 
         Circle cirOne = new Circle(); 
         Circle cirTwo = new Circle(); 
         Circle cirThree = new Circle();
@@ -50,6 +51,7 @@ public class Assignment03 extends Application{
         Circle cirSeven = new Circle();
         Circle cirEight = new Circle();
         
+        //using a polyong to create the roof 
         Polygon plyRoof = new Polygon(
                 1080/2, 0.0,
                 1080/18, 980/4,
@@ -58,7 +60,7 @@ public class Assignment03 extends Application{
         //creating stairs
         Rectangle[] arrRct = new Rectangle[size];
         
-        //Setting positions 
+        //Setting positions for variables
         rctGreen.setY(980/2);
         rctRed.setY(980/4);
         rctRed.setX(1080/8);
@@ -117,7 +119,7 @@ public class Assignment03 extends Application{
         
 
         
-        //setting style
+        //setting style for the variables, borders and color
         rctRed.setStroke(Color.BLACK);
         rctWhite.setStroke(Color.BLACK);
         plyRoof.setFill(Color.WHITE);
@@ -155,11 +157,11 @@ public class Assignment03 extends Application{
         //groups
         Group gp1 = new Group(rctBlue,rctGreen,rctRed,rctWhite, plyRoof,rctBlackDivider,rctPilOne,rctPilTwo,rctPilThree,rctPilFour,rctDoor1,rctDoor2,rctDoor3,rctSqr,cirOne,cirTwo,cirThree,cirFour,cirFive,cirSix,cirSeven,cirEight,rctSmOne,rctSmTwo,rctSmThree,rctSmFour);
         
-        //stairs for loop
+        //stairs for loop populate the steps 
        for (int i = 0; i < size; i++){
            arrRct[i] = new Rectangle(stepsWidth+=i*8,20,Color.LIGHTGRAY);
            arrRct[i].setStroke(Color.BLACK);
-           
+           //using a if statment to help position the first steps 
            if (i == 0){
            arrRct[i].setY(stepsY);
            arrRct[i].setX(stepsX);}
